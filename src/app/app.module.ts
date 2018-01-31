@@ -6,13 +6,11 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './+shared/angular.module';
 import { RoutingModule } from './route-config/routing.module';
-import { SearchComponent } from './components/search/search.component';
 import { GithubServiceService } from './services/github-service.service';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SearchComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

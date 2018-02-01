@@ -13,13 +13,9 @@ export class AppComponent implements OnInit {
 
   userGit: GitHubData;
 
-  constructor(private serviceGit: GithubServiceService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.serviceGit.searchUser('wilsonnovaes00')
-      .subscribe(dados => console.log('Dados =>', this.userGit = dados));
   }
-
-
 
 }

@@ -1,4 +1,50 @@
-<div class="content">
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,400|Yellowtail" rel="stylesheet">
+
+<div class="nav-bar">
+  <div class="horz-center nav-container">
+    <div class="floated logo">Challenge Itau</div>
+
+    <div class="floated right nav-div search-container">
+      <form class="data" #myForm="ngForm" (ngSubmit)="send(myForm)" novalidate>
+        <div class="rela-inline icon search-icon"></div>
+
+        <input type="text" placeholder="Search" class="rela-inline nav-search" [(ngModel)]="profileName" appLowerCase name="profileName"
+          required />
+        <button type="submit" class="button-nav-search" [disabled]="myForm.invalid || myForm.pending"> Search </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="content">
   <div class="logo">
     <img class="logo-git" src="../assets/github-logo.svg" alt="git-hub-api">
   </div>
@@ -7,7 +53,7 @@
     <form novalidate  #myForm="ngForm" (ngSubmit)="send(myForm)" novalidate>
       <mat-form-field class="example-full-width">
         <input class="search_input" matInput placeholder="Search User" [(ngModel)]="profileName" appLowerCase name="profileName" required>
-        
+
       </mat-form-field>
       <div class="button-container">
           <button class="button" type="submit" [disabled]="myForm.invalid || myForm.pending">
@@ -15,6 +61,8 @@
         </button>
       </div>
     </form>
-    
+
   </div>
 </div>
+
+ -->

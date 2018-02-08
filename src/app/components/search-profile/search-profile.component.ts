@@ -26,10 +26,8 @@ export class SearchProfileComponent implements OnInit {
       this.serviceGit.searchUser(this.profileName)
           .subscribe(dados => {
             this.profileRecived.emit(dados);
-          console.log(myForm.value);
       });
     }
-
   }
 }
 

@@ -1,0 +1,23 @@
+<div class="main-body">
+<div class="rela-block container">
+    <div class="rela-block profile-card">
+      <div> <img src="{{ profile?.avatar_url }} " alt="" class="profile-pic"></div>
+      <div class="rela-block profile-name-container">
+        <div class="rela-block user-name" id="user_name">{{ profile?.name }}</div>
+        <div class="rela-block user-desc" id="user_description">{{ profile?.company }}</div>
+      </div>
+      <div class="rela-block profile-card-stats">
+        <div class="floated profile-stat works" id="num_works">{{ profile?.public_repos }}
+          <br>
+        </div>
+        <div class="floated profile-stat followers" id="num_followers">{{ profile?.followers}}
+          <br>
+        </div>
+        <div class="floated profile-stat following" id="num_following">{{ profile?.following}}
+          <br>
+        </div>
+      </div>
+    </div>
+    <div class="rela-block content"></div>
+  </div>
+</div>

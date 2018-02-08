@@ -1,6 +1,7 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ViewChild } from '@angular/core';
 import { GithubServiceService } from '../../services/github-service.service';
 import { GitHubData } from '../../models/github-model';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-search-profile',
@@ -9,19 +10,26 @@ import { GitHubData } from '../../models/github-model';
 })
 export class SearchProfileComponent implements OnInit {
 
-  profileName: string;
+  @ViewChild('myForm')
+  private myForm: NgForm;
 
+  profileName: string;
   @Output() profileRecived: EventEmitter<GitHubData> = new EventEmitter();
 
   constructor(private serviceGit: GithubServiceService) { }
 
   ngOnInit() {
   }
-  send() {
-    this.serviceGit.searchUser(this.profileName).
-    subscribe(dados => {
-      this.profileRecived.emit(dados);
-    });
+
+  send(myForm: NgForm) {
+    if (myForm.value) {
+      this.serviceGit.searchUser(this.profileName)
+          .subscribe(dados => {
+            this.profileRecived.emit(dados);
+          console.log(myForm.value);
+      });
+    }
+
   }
 }
 

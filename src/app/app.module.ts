@@ -11,6 +11,7 @@ import { SearchComponent } from './components/search/search.component';
 import {  FormGroup, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ViewProfileComponent } from './components/view-profile/view-profile.component';
 import { SearchProfileComponent } from './components/search-profile/search-profile.component';
+import { ChangeDirective } from './directives/lowercase.directive';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { SearchProfileComponent } from './components/search-profile/search-profi
     AppComponent,
     SearchComponent,
     ViewProfileComponent,
-    SearchProfileComponent
+    SearchProfileComponent,
+    ChangeDirective
   ],
   imports: [
     BrowserModule,

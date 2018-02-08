@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { GitHubData } from '../../models/github-model';
 
 
+
 @Component({
   selector: 'app-view-profile',
   templateUrl: './view-profile.component.html',
@@ -15,5 +16,4 @@ export class ViewProfileComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

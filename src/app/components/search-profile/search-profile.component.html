@@ -4,11 +4,17 @@
   </div>
 
   <div class="form-home">
-      <mat-form-field  class="example-full-width">
-        <input class="search_input" matInput placeholder="Search User"  [(ngModel)]="profileName">
+    <form novalidate  #myForm="ngForm" (ngSubmit)="send(myForm)" novalidate>
+      <mat-form-field class="example-full-width">
+        <input class="search_input" matInput placeholder="Search User" [(ngModel)]="profileName" appLowerCase name="profileName" required>
+        
       </mat-form-field>
       <div class="button-container">
-        <button class="button" type="button" (click)="send()"><span>Search</span></button>
-    </div>
+          <button class="button" type="submit" [disabled]="myForm.invalid || myForm.pending">
+          <span>Search</span>
+        </button>
+      </div>
+    </form>
+    
   </div>
 </div>
